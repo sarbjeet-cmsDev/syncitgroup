@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Syncitgroup\Sgform\Model\MailInterface" type="Syncitgroup\Sgform\Model\Mail" />
+    <preference for="Syncitgroup\Sgform\Model\ConfigInterface" type="Syncitgroup\Sgform\Model\Config" />
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="sgform_listing_data_source" xsi:type="string">Syncitgroup\Sgform\Model\ResourceModel\Form\Grid</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Syncitgroup\Sgform\Model\ResourceModel\Form\Grid"
+             type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">sgform</argument>
+            <argument name="resourceModel" xsi:type="string">Syncitgroup\Sgform\Model\ResourceModel\Form</argument>
+        </arguments>
+    </virtualType>
+
+
+</config>
