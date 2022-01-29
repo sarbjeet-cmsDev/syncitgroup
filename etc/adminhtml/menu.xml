@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Syncitgroup_Sgform::manage" title="sgForm Entries" translate="title" module="Syncitgroup_Sgform" sortOrder="1111" parent="Magento_Customer::customer" action="sgform" resource="Syncitgroup_Sgform::manage"/>
+    </menu>
+</config>
